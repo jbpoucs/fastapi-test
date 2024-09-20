@@ -1,0 +1,14 @@
+{
+    "isort.check": true,
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter",
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": "explicit"
+        }
+    },
+    "editor.formatOnSave": true,
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true,
+    "mypy.runUsingActiveInterpreter": true,
+    "autoDocstring.docstringFormat": "google"
+}
