@@ -1,3 +1,5 @@
+from typing import Generator
+
 from core.config import settings
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
@@ -10,4 +12,9 @@ engine = create_engine(SQLALCHEMY_DATABASE_URl)
 SEASSIONLOCAL = sessionmaker(autoflush=False, autocommit=False, bind=engine)
 
 
-
+def get_db() -> Generator:
+    try:
+        db = SEASSIONLOCAL()
+        yield db
+    finally:
+        db.close()

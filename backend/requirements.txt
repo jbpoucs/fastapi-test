@@ -4,3 +4,6 @@ SQLAlchemy==2.0.13
 psycopg2
 python-dotenv>=0.5.1
 alembic==1.11.1
+pydantic[email]
+
+passlib[bcrypt]
